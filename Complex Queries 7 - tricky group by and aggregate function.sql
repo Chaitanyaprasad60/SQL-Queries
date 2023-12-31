@@ -1,4 +1,5 @@
 
+-- Question 7 - Analysing Data to find Percent Cancelled rides. 
 use sqlPractice;
 
 Create table  Trips (id int, client_id int, driver_id int, city_id int, status varchar(50), request_at varchar(50));

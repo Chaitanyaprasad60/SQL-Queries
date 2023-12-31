@@ -1,3 +1,5 @@
+-- Question 1 - Create a points with matches played, won and lost. 
+
 use sqlPractice; 
 
 
@@ -16,7 +18,7 @@ INSERT INTO icc_world_cup values('Aus','India','India');
 
 select * from icc_world_cup;
 
--- Question 1 - Create a points with matches played, won and lost. 
+
 -- My Approach 1
 
 select team as "Team",COUNT(allMatches.team) as "Matches Played",
@@ -30,7 +32,10 @@ group by allMatches.team;
 
 -- Work by problems - Same query is calculated twice for wins and losts
 
-with matchesWon as (select count(icc.Winner) from icc_world_cup icc where icc.Winner = allMatches.team) 
+WITH matchesWon as 
+(select count(icc.Winner) from icc_world_cup icc where icc.Winner = allMatches.team) 
+
+
 select team as "Team",COUNT(allMatches.team) as "Matches Played",
  (select * from matchesWon) as "Matches Won",
  (select * from matchesWon) - COUNT(allMatches.team) as "Matches Lost"

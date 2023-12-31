@@ -1,3 +1,5 @@
+-- Question 3 - Learning WINDOW Functions. 
+
 use sqlPractice;
 
 create table entries ( 

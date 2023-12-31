@@ -1,3 +1,6 @@
+-- Question 2 - Find the new Customers joined each month. 
+
+
 use sqlPractice;
 
 drop table if exists customer_orders;

@@ -1,3 +1,5 @@
+-- Quation 5 - Finding products that give top 20% Sales. 
+
 use sqlPractice;
 -- So according to pareto principle - 80/20
 -- top 20 % products which gives 80% of the sales
